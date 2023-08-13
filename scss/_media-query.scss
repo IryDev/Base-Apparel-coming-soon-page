@@ -1,0 +1,85 @@
+@use "mixins" as mix;
+
+@media screen and (min-width: 968px) {
+  .ring {
+    @include mix.ring(200px, #5a2400, 0.5s);
+  }
+
+  .background-img {
+    display: none;
+  }
+
+  .ring:nth-child(1) {
+    @include mix.ring(250px, #d77b00, 1s);
+    top: -8rem;
+    right: 2rem;
+  }
+
+  .ring:nth-child(2) {
+    @include mix.ring(150px, #ccbfc4, 0.5s);
+  }
+
+  .ring:nth-child(3){
+    @include mix.ring(200px, #5a2400, 0.5s);
+    bottom: 4rem;
+  }
+
+  .rectangle {
+    @include mix.rectangle;
+    top: 0;
+    left: 0;
+    animation: slide2 1s ease-in-out forwards;
+  }
+
+  .rectangle2 {
+    @include mix.rectangle;
+    bottom: 0;
+    right: 0;
+    animation: slide3 1s ease-in-out forwards;
+  }
+
+
+
+  header.mobile-header {
+    display: none;
+  }
+
+  body {
+    background: #a1603e;
+  }
+
+  .desktop-header {
+    position: absolute;
+    display: block;
+    top: 3rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    min-height: 100vh;
+  }
+
+  .hero-desktop {
+    // background-size: cover;
+    animation: slide 2s ease-in-out forwards;
+    animation-delay: 2s;
+    order: 2;
+    transform: translateY(-100%);
+  }
+
+  .main-container {
+    text-align: left;
+    align-items: inherit;
+    padding: 4rem 8rem;
+    order: 1;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 6rem;
+    span {
+      font-size: 6rem;
+    }
+  }
+}

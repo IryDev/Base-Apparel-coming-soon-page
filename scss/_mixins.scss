@@ -1,0 +1,18 @@
+@mixin ring($size, $color, $delay) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: 5px solid $color;
+  position: absolute;
+  transform: scale(0);
+  z-index: -3;
+  animation: circles 1s linear forwards;
+  animation-delay: $delay;
+}
+
+@mixin rectangle {
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  background-color: #913d05;
+}
