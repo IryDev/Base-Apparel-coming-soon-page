@@ -5,9 +5,12 @@
     @include mix.ring(200px, #5a2400, 0.5s);
   }
 
-  .background-img {
+  body {
+  background-color: #65391f;
+  &::before {
     display: none;
   }
+}
 
   .ring:nth-child(1) {
     @include mix.ring(250px, #d77b00, 1s);
@@ -21,7 +24,8 @@
 
   .ring:nth-child(3){
     @include mix.ring(200px, #5a2400, 0.5s);
-    bottom: 4rem;
+    bottom: 0rem;
+    left: -4rem
   }
 
   .rectangle {
@@ -38,14 +42,12 @@
     animation: slide3 1s ease-in-out forwards;
   }
 
-
-
   header.mobile-header {
     display: none;
   }
 
   body {
-    background: #a1603e;
+    background-color: #65391f;
   }
 
   .desktop-header {
