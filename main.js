@@ -1,6 +1,7 @@
 import "./scss/main.scss";
 import Typed from "typed.js";
 import hero from "./assets/hero.png";
+import hero2 from "./assets/hero.jpeg";
 import arrow from "./assets/icon-arrow.svg";
 import logo from "./assets/logo.png";
 
@@ -10,8 +11,6 @@ document.querySelector("#app").innerHTML = `
     </header>
     
     <main>
-      <div class="hero-desktop" style="background: url(${hero}) no-repeat center; background-size: cover;">
-      </div>
     
       <div class="main-container">
         <div class="ring"></div>
@@ -37,13 +36,10 @@ document.querySelector("#app").innerHTML = `
             <form method="post" novalidate>
     
               <input type="email" placeholder="Email Address" aria-label="Email Address" required>
-    
-              
+
                 <button type="submit" class="submit" aria-label="Subscribe">
                   <img src="${arrow}" alt="arrow">
                 </button>
-              
-    
             </form>
     
             <p class="post-success" aria-live="polite" aria-describedby="success-description">
@@ -55,6 +51,15 @@ document.querySelector("#app").innerHTML = `
             </p>
           </div>
         </div>
+      </div>
+
+      <div class="hero-desktop" style="background-image: url(${hero})">
+      </div>
+
+
+      <div class="overlay-mobile">
+      </div>
+      <div class="hero-mobile" style="background-image:url(${hero})">
       </div>
     </main>
 `;
@@ -94,3 +99,22 @@ function validate(e) {
 function isEmail(email) {
   return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
 }
+
+const heroImage = document.querySelector(".hero-desktop");
+const heroMobile = document.querySelector(".hero-mobile");
+const images = [hero, hero2];
+let currentImageIndex = 0;
+
+function toggleImagesWithOpacityAnimation() {
+  heroImage.style.opacity = 0;
+  heroMobile.style.opacity = 0;
+  setTimeout(() => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    heroImage.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    heroMobile.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    heroMobile.style.opacity = 1;
+    heroImage.style.opacity = 1;
+  }, 500);
+}
+
+setInterval(toggleImagesWithOpacityAnimation, 5000);

@@ -50,3 +50,31 @@
         opacity: 1;
     }
 }
+
+@keyframes width{
+    from{
+        width: 100px;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes wave {
+  0%{
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  75% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
