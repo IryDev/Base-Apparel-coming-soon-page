@@ -7,7 +7,7 @@ import logo from "./assets/logo.webp";
 
 document.querySelector("#app").innerHTML = `
     <header class="mobile-header">
-      <img class="logo" src="${logo}" alt="logo">
+      <img class="logo" src="${logo}" alt="logo" width=158px height=33px>
     </header>
     
     <main>
