@@ -7,7 +7,7 @@ import logo from "./assets/logo.webp";
 
 document.querySelector("#app").innerHTML = `
     <header class="mobile-header">
-      <img class="logo" src="${logo}" alt="logo" width=158px height=33px>
+      <img class="logo" src="${logo}" alt="logo" width="158" height="33">
     </header>
     
     <main>
@@ -38,7 +38,7 @@ document.querySelector("#app").innerHTML = `
               <input type="email" placeholder="Email Address" aria-label="Email Address" required>
 
                 <button type="submit" class="submit" aria-label="Subscribe">
-                  <img src="${arrow}" alt="arrow">
+                  <img src="${arrow}" alt="arrow" width="12" height="20">
                 </button>
             </form>
     
