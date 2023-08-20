@@ -1,9 +1,9 @@
 import "./scss/main.scss";
 import Typed from "typed.js";
-import hero from "./assets/hero.png";
-import hero2 from "./assets/hero.jpeg";
+import hero from "./assets/hero1.avif";
+import hero2 from "./assets/hero2.avif";
 import arrow from "./assets/icon-arrow.svg";
-import logo from "./assets/logo.png";
+import logo from "./assets/logo.webp";
 
 document.querySelector("#app").innerHTML = `
     <header class="mobile-header">
