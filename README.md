@@ -27,7 +27,7 @@ Users should be able to:
   - The `input` field is empty
   - The email address is not formatted correctly
 
-### Redesign
+## Redesign
 <img src="https://github.com/IryDev/Base-Apparel-coming-soon-page/assets/86270481/a4b97606-3b49-49aa-8698-07ce38c0b628" alt="IryDev Base Apparel Coming Soon Redesign">
 
 ### Links
