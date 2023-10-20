@@ -26,7 +26,7 @@ document.querySelector("#app").innerHTML = `
     
         <div class="main__content">
     
-          <h1><span class="were">WE'RE</span> <br> <span class="typed-text"></h1>
+          <h1 aria-label="Wer're comming soon"><span class="were">WE'RE</span> <br> <span aria-hidden="true" class="typed-text"></h1>
           <p>
             Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date
             width announcements and our launch deals.
